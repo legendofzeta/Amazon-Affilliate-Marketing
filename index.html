@@ -3,58 +3,60 @@
 <head>
     <title>Amazon Affiliate Example</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            margin: auto;
-            text-align: center;
-            font-family: arial;
-        }
-        .title {
-            color: grey;
-            font-size: 18px;
-        }
-        button {
-            border: none;
-            outline: 0;
-            display: inline-block;
-            padding: 8px;
-            color: white;
-            background-color: #000;
-            text-align: center;
-            cursor: pointer;
-            width: 100%;
-            font-size: 18px;
-        }
-        a {
-            text-decoration: none;
-            font-size: 22px;
-            color: black;
-        }
-        button:hover, a:hover {
-            opacity: 0.7;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Amazon Affiliate Site</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sponsors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Special Deals</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
-        <h1 class="text-center">Check out this awesome product on Amazon!</h1>
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="card">
                     <img src="https://m.media-amazon.com/images/I/41uJpkFwYtL._AC_UY218_.jpg" class="card-img-top" alt="Example Product">
                     <div class="card-body">
                         <h5 class="card-title">Example Product</h5>
-                        <p class="card-text">Price: $24.99</p>
-                        <p class="card-text"> Description: This is an example product that I am promoting as an affiliate through Amazon. It is a high-quality product that I highly recommend.</p>
-                        <a href="https://www.amazon.com/dp/B07HGJKQ5F?tag=your-affiliate-id-20">
-                            <button>View on Amazon</button>
-                        </a>
+                        <p class="card-text">
+                            <strong>Description:</strong> This is an example product with a detailed description of its features and benefits.
+                        </p>
+                        <p class="card-text">
+                            <strong>Price:</strong> $24.99
+                        </p>
+                        <a href="https://www.amazon.com/dp/B07HGJKQ5F?tag=your-affiliate-id-20" class="btn btn-primary">View on Amazon</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><script>
+    $(document).ready(function(){
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    });
+</script></body>
 </html>
